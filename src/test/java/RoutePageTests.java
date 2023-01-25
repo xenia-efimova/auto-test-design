@@ -6,7 +6,7 @@ import static io.qameta.allure.Allure.step;
 public class RoutePageTests {
 
     @Test
-    @DisplayName("Модальное окно для создания и редактирования маршрута")
+    @DisplayName("Вид модального окна для создания и редактирования маршрута")
     public void shouldOpenRoutesModalPageTest() {
         step("Открыть модальное окно для создания и редактирования маршрута", () -> {});
         step("Убедиться, что модальное окно выглядит в соответствии с дизайном", () -> {});
@@ -30,7 +30,7 @@ public class RoutePageTests {
     }
 
     @Test
-    @DisplayName("Блок с названиями городов")
+    @DisplayName("Состояние чек-боксов в блоке с названиями городов")
     public void citiesBlockTest()  {
         //Такое название метода ок? Мне показалось, что вполне
         step("Открыть модальное окно для создания и редактирования маршрута, перейдя по URL", () -> {});
