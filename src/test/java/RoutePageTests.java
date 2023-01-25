@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -5,6 +6,7 @@ import static io.qameta.allure.Allure.step;
 public class RoutePageTests {
 
     @Test
+    @DisplayName("Модальное окно для создания и редактирования маршрута")
     public void shouldOpenRoutesModalPageTest() {
         step("Открыть модальное окно для создания и редактирования маршрута", () -> {});
         step("Убедиться, что модальное окно выглядит в соответствии с дизайном", () -> {});
@@ -12,6 +14,7 @@ public class RoutePageTests {
     }
 
     @Test
+    @DisplayName("Поиск по названию города")
     public void shouldSearchByCitiesTest() {
         step("Открыть модальное окно для создания и редактирования маршрута, перейдя по URL", () -> {});
         step("Ввести в поисковой строке название города 'Ижевск'", () -> {});
@@ -19,6 +22,7 @@ public class RoutePageTests {
     }
 
     @Test
+    @DisplayName("Поиск по названию ПВЗ")
     public void shouldSearchByDeliveryPointTest() {
         step("Открыть модальное окно для создания и редактирования маршрута, перейдя по URL", () -> {});
         step("Ввести в поисковой строке название ПВЗ 'КЗН-12'", () -> {});
@@ -26,7 +30,8 @@ public class RoutePageTests {
     }
 
     @Test
-    public void CitiesBlockTest()  {
+    @DisplayName("Блок с названиями городов")
+    public void citiesBlockTest()  {
         //Такое название метода ок? Мне показалось, что вполне
         step("Открыть модальное окно для создания и редактирования маршрута, перейдя по URL", () -> {});
         step("Отметить чек-бокс с названием города Казань", () -> {});
@@ -40,6 +45,7 @@ public class RoutePageTests {
     }
 
     @Test
+    @DisplayName("Выбор чек-боксов в блоке со списком ПВЗ")
     public void shouldSelectItemsOfDeliveryPointsTest () {
         step("Открыть модальное окно для создания и редактирования маршрута, перейдя по URL", () -> {});
         step("Отметить чек-бокс с названием города Йошкар-Ола", () -> {});
@@ -53,6 +59,7 @@ public class RoutePageTests {
     }
 
     @Test
+    @DisplayName("Выбор всех значений списка ПВЗ")
     public void shouldSelectAllItemsOfDeliveryPointsTest() {
         step("Открыть модальное окно для создания и редактирования маршрута, перейдя по URL", () -> {});
         step("Отметить чек-бокс с названием города Казань", () -> {});
@@ -64,6 +71,7 @@ public class RoutePageTests {
     }
 
     @Test
+    @DisplayName("Отмена выбранных значений списка ПВЗ")
     public void shouldDeselectAllItemsOfDeliveryPointsTest () {
         step("Открыть модальное окно для создания и редактирования маршрута, перейдя по URL", () -> {});
         step("Отметить чек-бокс с названием города Казань", () -> {});
@@ -81,6 +89,7 @@ public class RoutePageTests {
     }
 
     @Test
+    @DisplayName("Отображение текстовой подсказки в блоке ПВЗ")
     public void shouldOpenTooltipInDeliveryPointsBlockTest () {
         step("Открыть модальное окно для создания и редактирования маршрута, перейдя по URL", () -> {});
         step("Отметить чек-бокс с названием города Казань", () -> {});
@@ -92,6 +101,7 @@ public class RoutePageTests {
     }
 
     @Test
+    @DisplayName("Привязывание ПВЗ к маршруту")
     public void shouldLinkDeliveryPointToRouteTest () {
         step("Открыть модальное окно для создания и редактирования маршрута, перейдя по URL", () -> {});
         step("Отметить чек-бокс с названием города Казань", () -> {});
@@ -103,6 +113,7 @@ public class RoutePageTests {
     }
 
     @Test
+    @DisplayName("Безуспешное сохранение изменений в модальном окне создания и редактирования маршрута")
     public void shouldNotSaveChangesTest () {
        step("Открыть модальное окно для создания и редактирования маршрута, перейдя по URL", () -> {});
        step("Создать новый маршрут", () -> {});
@@ -117,6 +128,7 @@ public class RoutePageTests {
     }
 
     @Test
+    @DisplayName("Успешное сохранение изменений в модальном окне создания и редактирования маршрута")
     public void shouldSaveChangesTest () {
         step("Открыть модальное окно для создания и редактирования маршрута, перейдя по URL", () -> {});
         step("Создать новый маршрут", () -> {});
